@@ -1,0 +1,284 @@
+/* Classes used by controls. Should be prefixed with "tnpc-" */
+
+* {
+    --tnp-input-border: 1px solid #ddd;
+}
+
+/* Top page messages */
+.tnpc-error, .tnpc-warning, .tnpc-message,
+.tnp-error, .tnp-warning, .tnp-message {
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-left: 0px;
+    border-radius: 3px;
+    border: 1px solid var(--tnp-gray-light);
+}
+
+.tnpc-error, .tnp-error {
+    background-color: var(--tnp-red-lighter);
+    border-color: var(--tnp-red-light);
+    color: var(--tnp-red-darker);
+    /*border-left: 5px solid #dd0000;*/
+}
+
+.tnpc-warning, .tnp-warning {
+    background-color: var(--tnp-orange-lighter);
+    border-color: var(--tnp-orange-light);
+    color: var(--tnp-orange-darker);
+    /*border-left: 5px solid #ffb900;*/
+}
+
+.tnpc-message, .tnp-message {
+    background-color: var(--tnp-green-lighter);
+    /*border-left: 5px solid #46b450;*/
+    border-color: var(--tnp-green);
+    color: var(--tnp-green-darker);
+}
+
+#tnp-body .tnp-panel-help {
+    margin: 0;
+    float: right;
+}
+
+#tnp-body .tnp-panel-help a {
+    text-decoration: none;
+    font-weight: normal;
+    line-height: normal;
+    display: inline-block;
+    background-color: #aaa;
+    padding: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/* Structure */
+
+/* Tables with controls */
+#tnp-body .form-table {
+    background-color: #fff;
+    margin-top: 1rem;
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+#tnp-body .fieldset .form-table {
+    margin-top: 0;
+}
+
+#tnp-body .form-table h4,
+#tnp-body .form-table h3 {
+    color: var(--tnp-text);
+}
+
+/* WP has different padding for TH and TD (why???) */
+#tnp-body .form-table th, 
+#tnp-body .form-table td { 
+    padding: 1rem;
+}
+
+/* Field label */
+#tnp-body .form-table th {
+    /*text-align: right;*/
+    text-align: left;
+    position: relative;
+    font-weight: normal;
+    max-width: 200px;
+    width: 150px;
+    color: var(--tnp-text);
+    /*background-color: #ECF0F1;*/
+    vertical-align: top;
+    /*white-space: nowrap;*/
+    /*padding-top: 20px;*/
+}
+
+#tnp-body .form-table td {
+    width: auto;
+    vertical-align: top;
+}
+
+#tnp-body .form-table td .tnpc-grid th {
+    color: #666;
+}
+
+#tnp-body .form-table td span.description {
+    visibility: hidden;
+    font-size: 12px !important;
+    color: #666;
+    font-style: italic;
+}
+
+#tnp-body .form-table td:hover span.description {
+    visibility: visible;
+}
+
+#tnp-body .form-table th a {
+    color: #000;
+    text-decoration: none;
+    /*text-decoration-style: dashed;*/
+    cursor: help;
+    position: absolute;
+    top: 20px;
+    right: -10px;
+}
+
+#tnp-body .form-table th a i {
+    color: #aaa;
+}
+
+#tnp-body .form-table th small {
+    font-weight: normal;
+    display: block;
+}
+
+#tnp-body select {
+    vertical-align: baseline;
+}
+
+#tnp-body .form-table input,
+#tnp-body .form-table textarea,
+#tnp-body .form-table select
+{
+    border: var(--tnp-input-border);
+}
+
+#tnp-body .form-table textarea {
+    width: 100%;
+}
+
+/* Subtables contained in a main form table TD */
+#tnp-body .form-table td table {
+    border: 0;
+    border-collapse: collapse;
+}
+
+#tnp-body .form-table td table th {
+    background-color: transparent;
+    text-align: right;
+    width: auto;
+    border: 0;
+    padding: 3px;
+    font-weight: normal;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+
+#tnp-body .form-table td table td {
+    background-color: transparent;
+    border: 0;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+#tnp-body .form-table td table.widefat th {
+    /*background-color: transparent;*/
+    text-align: left;
+    width: auto;
+    padding: 5px;
+    font-weight: normal;
+}
+
+#tnp-body .form-table td table.widefat td {
+    /*background-color: transparent;*/
+    padding: 5px;
+    vertical-align: middle;
+}
+
+/* Fix for select 2 */
+#tnp-body .form-table td ul {
+    margin-left: 0;
+}
+
+#tnp-body .select2 input {
+    border: 0;
+}
+
+#tnp-body .select2-container--default .select2-selection--multiple {
+    border: var(--tnp-input-border);
+}
+
+#tnp-body .tnpc-media {
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+}
+
+#tnp-body .tnpc-media-remove {
+    position: absolute; 
+    top: 0px; 
+    right: 5px; 
+    background-color: transparent; 
+    color: var(--tnp-text) !important;  
+    font-size: 24px; 
+    display: block; 
+    text-decoration: none;
+    border: 0;
+    line-height: normal !important;
+}
+
+/* Set of checkboxes */
+.tnpc-checkboxes label {
+    display: block;
+    float: left;
+    width: 250px;
+    border: var(--tnp-input-border);
+    background-color: #fbfbfb;
+    margin-bottom: 5px;
+    padding: 5px;
+    white-space: nowrap;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.tnpc-lists label {
+    display: block;
+    padding: 5px 0;
+}
+
+.tnpc-lists label span {
+    border-radius: 3px;
+    color: #fff;
+    background-color: #aaa;
+    display: inline-block;
+    padding: 1px 5px;
+    min-width: 2em;
+    font-size: .9em;
+    text-align: center;
+}
+
+
+/* Hint text after a field */
+.tnpc-hint, p.description {
+    margin-top: 15px;
+    clear: both;
+    font-size: 12px !important;
+    color: #666;
+    font-style: italic;
+}
+
+/* Color picker */
+.tnpc-color {
+    width: 40px;
+    font-size: 12px;
+}
+
+/* Buttons */
+.tnpc-button, .tnpc-button:visited, .tnpc-button:hover, .tnpc-button:active {
+    min-width: 3em;
+    text-align: center;
+    color: #fff!important;
+    width: auto;
+}
+
+/* Lists select with triggers */
+.tnpc_lists_notes {
+    color: #999;
+    font-size: .9em;
+    padding: 0px 0 0 15px; 
+    border-left: 3px solid #888;
+    margin-top: 10px;
+}

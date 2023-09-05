@@ -1,0 +1,41 @@
+#tnp-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: transparent;
+    border-top: 1px solid #fff;
+}
+
+#tnp-footer div {
+    /*width: 33%;*/
+    /*display: inline-block;*/
+}
+
+#tnp-footer a {
+    color: var(--tnp-text);
+    text-decoration: none;
+}
+
+#tnp-footer a:hover {
+    color: #444;
+}
+
+#tnp-footer input[type="submit"] {
+    background-color: var(--tnp-green);
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+#tnp-footer form {
+    white-space: nowrap;
+}
+
+#tnp-footer li {
+    display: inline;
+    margin-right: 15px;
+    padding: 2px 5px 2px 5px;
+    border-left: 3px solid #2ECC71;
+}

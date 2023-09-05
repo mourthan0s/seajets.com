@@ -1,0 +1,33 @@
+.tnp-paginator {
+    margin: 10px 0px 5px 0px;
+}
+
+.tnp-paginator .button-secondary {
+    padding: 5px;
+    line-height: normal;
+    height: auto;
+    font-size: 12px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+    vertical-align: baseline;
+}
+
+.tnp-paginator [value="Go"] {
+    background-color: #27AE60 !important;
+}
+
+.tnp-paginator [value="Go"]:hover {
+    background-color: #2ECC71 !important;
+}
+
+.tnp-paginator input {
+    /*background-color: #2C3E50;*/
+    /*border: none;*/
+    border-radius: 3px;
+    /*color: #fff;*/
+    padding: 5px;
+    line-height: normal;
+    font-size: 12px;
+    height: 25px;
+}

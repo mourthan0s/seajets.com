@@ -1,0 +1,180 @@
+/* Used even by the addons manager addon */
+
+#tnp-promo {
+    text-align: left;
+    background-color: #222b36;
+    margin: 2rem 0;
+    border-radius: 5px;
+    padding: 20px 40px;
+}
+#tnp-promo .tnp-promo-how-to {
+    width: 50%;
+    padding: 5px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-left: 2px solid #F1C40F;
+}
+
+#tnp-promo .tnp-promo-how-to h3  {
+    color: #ECF0F1;
+    margin: 0px;
+    line-height: 36px;
+}
+
+#tnp-promo .tnp-promo-how-to p  {
+    color: #ECF0F1;
+    margin: 0px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+#tnp-promo .tnp-promo-buttons {
+    margin: 50px 0px;
+}
+
+#tnp-promo .tnp-promo-button {
+    background: #27AE60;
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+#tnp-promo .tnp-promo-button:hover {
+    background: #2ECC71;
+    color: white;
+}
+
+#tnp-promo .tnp-promo-button i {
+    margin-right: 3px;
+}
+
+.tnp-section {
+}
+
+.tnp-extension-premium-box, .tnp-extension-free-box, .tnp-integration-box {
+    width: 300px;
+    height: 220px;
+    /*background-color: #222B36;*/
+    background-color: #28313C;
+    text-align: center;
+    margin: 20px 20px 0px 0px;
+    float: left;
+    position: relative;
+}
+
+.tnp-extension-premium-box:hover, .tnp-extension-free-box:hover, .tnp-integration-box:hover {
+    /*background-color: #232C35;*/
+    background-color: #2B343F;
+    box-shadow: 1px 1px 15px #222B36;
+}
+
+#tnp-body .tnp-extension-premium-box p, #tnp-body .tnp-extension-free-box p, #tnp-body .tnp-integration-box p {
+    padding: 5px 10px;
+    color: #eee;
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+#tnp-body .tnp-extension-premium-box h3,
+#tnp-body .tnp-extension-free-box h3,
+#tnp-body .tnp-extension-free-box h3,
+#tnp-body .tnp-integration-box h3 { 
+    font-family: var(--tnp-font-family);
+    padding: 5px 8px !important;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0px !important;
+    margin-top: 25px !important;
+    font-weight: 300;
+    width: auto !important;
+    border-bottom: none !important;
+}
+
+.tnp-extension-premium-action {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 12px;
+    font-family: soleil, sans-serif;
+}
+
+.tnp-extension-free-action {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 12px;
+    font-family: soleil, sans-serif;
+}
+
+.tnp-integration-action {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 12px;
+    font-family: soleil, sans-serif;
+}
+
+
+.tnp-extension-premium-action span {
+    color: #27AE60;
+}
+
+.tnp-extension-free-action span {
+    color: #27AE60;
+}
+
+.tnp-integration-action span {
+    color: #27AE60;
+}
+
+.tnp-extension-activate {
+    color: #1ABC9C;
+    padding: 5px 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tnp-extension-install {
+    color: #2980B9;
+    padding: 5px 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tnp-extension-buy {
+    color: #F1C40F;
+    padding: 5px 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#tnp-body a.tnp-extension-details{
+    color: #999999;
+    padding: 5px 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tnp-extension-free {
+    color: #D35400;
+    padding: 5px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+img.tnp-extensions-free-badge {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    width: 70px;
+}
+
+.tnp-extensions-image img {
+    margin: 25px 0px -10px;
+}

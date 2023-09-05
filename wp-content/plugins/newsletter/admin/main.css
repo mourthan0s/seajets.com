@@ -1,0 +1,959 @@
+/* WordPress admin main wrapper */
+:root {
+    --tnp-green-lighter: #e5f2eb;
+    --tnp-green-light: #b2d9c2;
+    --tnp-green: #75bc92;
+    --tnp-green-dark: #4fa371;
+    --tnp-green-darker: #36704e;
+
+
+    --tnp-red-lighter: #fef6f3;
+    --tnp-red-light: #f9c2b0;
+    --tnp-red: #f38865;
+    --tnp-red-dark: #ee511e;
+    --tnp-red-darker: #b2360e;
+
+
+    
+    --tnp-orange-lighter: hsl(22, 88%, 90%);
+    --tnp-orange-light: hsl(22, 88%, 75%);
+    --tnp-orange: hsl(22, 88%, 58%);
+    --tnp-orange-dark: hsl(22, 88%, 38%);
+    --tnp-orange-darker: hsl(22, 88%, 18%);
+
+    /*--tnp-blue-lighter: #b3d9f2;*/
+    --tnp-blue-lighter: #f4fafd;
+    --tnp-blue-light: #72b8e6;
+    --tnp-blue: #3498db;
+    --tnp-blue-dark: #1d6da2;
+    --tnp-blue-darker: #114161;
+
+    --tnp-gray-lighter: #eee;
+    --tnp-gray-light: #999;
+    --tnp-gray: #666;
+    --tnp-gray-dark: #444;
+    --tnp-gray-darker: #222;
+
+
+    --tnp-text: #555;
+    --tnp-title: #333;
+
+    --tnp-font-family: Inter, sans-serif;
+
+    --tnp-status-green: hsl(140, 70%, 22%);
+    --tnp-status-green-bg: hsl(140, 70%, 85%);
+
+    --tnp-status-purple-bg: hsl(282, 43%, 90%);
+    --tnp-status-purple: hsl(282, 43%, 37%);
+
+    --tnp-status-red-bg: hsl(0, 100%, 90%);
+    --tnp-status-red: hsl(0, 100%, 33%);
+
+    --tnp-status-orange-bg: hsl(17, 82%, 92%);
+    --tnp-status-orange: hsl(17, 82%, 43%);
+    
+    --tnp-status-blue-bg: hsl(204, 70%, 90%);
+    --tnp-status-blue: hsl(204, 70%, 40%);
+    
+
+    --tnp-status-gray-bg: #eee;
+    --tnp-status-gray: #444;
+
+    --tnp-status-gray-bg: hsl(219, 100%, 90%);
+    --tnp-status-gray: hsl(219, 100%, 27%);
+    
+    --tnp-led-green: hsl(140, 70%, 40%);
+    --tnp-led-gray: #ccc;
+
+}
+
+#wpwrap {
+    /*background-color: #222B36 !important;*/
+}
+
+#wpcontent {
+    /*padding-left: 0;*/
+}
+
+#wpbody-content {
+    padding-bottom: 20px;
+}
+
+#tnp-wrap * {
+    box-sizing: border-box;
+}
+
+#tnp-wrap {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+#tnp-wrap,
+#tnp-wrap th,
+#tnp-wrap p,
+#tnp-wrap td,
+#tnp-wrap tbody td,
+#tnp-wrap tbody th,
+#tnp-wrap thead td,
+#tnp-wrap thead th,
+#tnp-wrap td p,
+#tnp-wrap h1,
+#tnp-wrap h2,
+#tnp-wrap h3,
+#tnp-wrap h4,
+#tnp-wrap input,
+#tnp-wrap select,
+#tnp-wrap textarea,
+#tnp-wrap button,
+#tnp-wrap li,
+#tnp-wrap a
+{
+    font-family: var(--tnp-font-family);
+    -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale; /* Firefox */
+    color: var(--tnp-text);
+    font-weight: normal;
+}
+
+.tnp-row-padded {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tnp-col-3-boxed {
+    width: 30%;
+    border: 1px solid #3c414c;
+    padding: 0px 0px 30px 0px;
+    border-radius: 10px;
+}
+
+.tnp-margin-top {
+    margin-top: 80px;
+}
+
+/******************************************************************************
+* BODY
+******************************************************************************/
+
+#tnp-body {
+    padding: 0 0px 10px 0px;
+    /*background-color: #28313C;*/
+}
+
+
+#tnp-body h3 {
+    margin-top: 25px;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#tnp-body hr {
+    height: 0px;
+    border: 0;
+    border-top: 1px solid #666;
+}
+
+#tnp-body ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+#tnp-body a, #tnp-body a:active {
+    color: #2980B9; /* Blue */
+}
+
+#tnp-body a:hover {
+    color: #3498DB;
+}
+
+/* Action button container */
+#tnp-body .tnp-submit {
+    margin-bottom: 10px;
+}
+
+/* Primary button correction */
+#tnp-body .button,
+#tnp-body .button:visited,
+#tnp-body .button:hover,
+#tnp-body .button:active,
+#tnp-body .button:focus,
+#tnp-body .button-primary,
+#tnp-body .button-primary:visited,
+#tnp-body .button-primary:hover {
+    color: #fff;
+    text-shadow: none;
+    width: auto;
+    vertical-align: bottom;
+}
+
+#tnp-body .button-secondary,
+#tnp-body .button-secondary:visited,
+#tnp-body .button-secondary:hover {
+    color: #fff;
+    background-color: #999;
+    text-shadow: none;
+    width: auto;
+    vertical-align: bottom;
+}
+
+.wp-core-ui #tnp-body .button-tertiary,
+#tnp-body .button-tertiary:visited,
+#tnp-body .button-tertiary:hover {
+    color: var(--tnp-text)!important;
+    background-color: transparent;
+    text-shadow: none;
+    width: auto;
+    vertical-align: bottom;
+    border: 1px solid #999;
+}
+
+/* Icon in button media selector */
+#tnp-body span.wp-media-buttons-icon:before {
+    color: #fff;
+}
+
+/* Standard button */
+#tnp-body .tnp-button {
+    color: #fff;
+    background-color: #3498db;
+    text-shadow: none;
+}
+
+/* White button variant */
+#tnp-body .button-primary.tnp-button-white, #tnp-body .tnp-button.tnp-button-white {
+    color: #444!important;
+    background-color: #fff!important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    width: auto;
+}
+
+
+#tnp-body td .button,
+#tnp-body td .button:visited,
+#tnp-body td .button:hover,
+#tnp-body td .button:active,
+#tnp-body td .button:focus {
+    color: #444;
+}
+
+#tnp-body td a,
+#tnp-body td a:visited {
+    color: #27AE60; /* Green */
+}
+
+/*******************************************************************************
+ * Wide fat tables
+ */
+
+#tnp-body .widefat {
+    width: 90%;
+    color: var(--tnp-text);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#tnp-body .widefat th {
+    text-align: left;
+}
+
+#tnp-body .widefat thead {
+    background-color: #fff;
+    color: var(--tnp-text) !important;
+}
+
+#tnp-body .widefat thead tr th {
+    color: var(--tnp-text) !important;
+}
+
+#tnp-body .widefat td, .widefat th {
+    vertical-align: middle;
+}
+
+#tnp-body .widefat tbody tr:nth-child(odd) {
+    background-color: #f4faff;
+}
+
+
+
+table.clicks td {
+    border: 1px solid #666;
+    padding: 2px;
+    font-size: 10px;
+}
+
+table.clicks {
+    border-collapse: collapse;
+}
+
+.grid {
+    border-collapse: collapse;
+}
+.grid td, .grid th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 0;
+}
+.grid th {
+    background-color: #aaa;
+}
+
+.tnp-buttons {
+    /*background-color: #0073aa;*/
+    padding: 10px 0;
+}
+
+
+/* Admin wide notices */
+
+#tnp-wrap .tnp-notice {
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-left: 0px;
+    border-radius: 3px;
+    border: 1px solid var(--tnp-gray-light);
+    color: var(--tnp-text);
+}
+
+#tnp-wrap .tnp-notice a {
+    color: var(--tnp-blue-dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#tnp-wrap .tnp-notice.tnp-notice-warning {
+    background-color: var(--tnp-orange-lighter); 
+    border-color: var(--tnp-orange-light)
+}
+
+#tnp-wrap .tnp-notice a.tnp-dismiss {
+    display: block;
+    line-height: normal;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--tnp-text) !important;
+}
+
+#tnp-wrap .tnp-notice input[type=email] {
+    width: 250px;
+    box-shadow: none;
+}
+
+#tnp-wrap .tnp-notice input[type=submit] {
+    background-color: var(--tnp-blue);
+    font-size: 13px;
+    color: #fff;
+}
+
+
+.newsletter-textarea-preview {
+    border: 1px solid #ddd;
+}
+
+.tnp-tab-notice {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid gray;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.tnp-tab-warning {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid orange;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.tnp-tab-success {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid green;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+.tnp-tab-error {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-left: 3px solid red;
+    padding: 10px;
+    margin: 10px 0;
+    color: #444;
+}
+
+
+/*  CSS The Newsletter Team */
+
+/* CSS Tips */
+
+.tnp-tip {
+    margin-top: 5px;
+}
+
+.tip-button {
+    padding: 0px 5px;
+    color: #FD5F65;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 10px;
+    border: 1px red solid;
+}
+
+.tip-content {
+    font-weight: 500;
+    font-size: 11px;
+    color: #999999;
+}
+
+/* CSS General Font Styles */
+
+
+
+
+/* CSS Themes Preview */
+
+.tnp-theme-preview {
+    display: inline-block;
+    text-align: center;
+}
+
+.tnp-theme-preview p {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: #fff;
+}
+
+.tnp-theme-preview img:hover {
+    box-shadow: 3px 3px 8px 2px #293848;
+}
+
+.tnp-theme-preview img {
+    border-radius: 10px;
+    height: 190px;
+    width: auto;
+}
+
+.tnp-theme-preview .tnp-theme-composer {
+    height: 250px;
+    width: auto;
+}
+
+.tnp-theme-preview .tnp-theme-html {
+    width: auto;
+}
+
+
+
+
+
+/* Global buttons styles */
+.wp-core-ui .button-secondary, .wp-core-ui .button-primary {
+    background-color: var(--tnp-blue);
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    margin: 0px 2px;
+    width: auto;
+}
+
+.wp-core-ui .button-secondary {
+    background-color: #ccc;
+}
+
+.wp-core-ui .button-secondary:hover, .wp-core-ui .button-primary:hover {
+    background-color: #5DADE2;
+    color: #fff;
+    width: auto;
+}
+
+span.wp-media-buttons-icon:before {
+    color: #fff;
+}
+
+/* Responsive Video Embeds */
+
+.tnp-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.tnp-video-container iframe,
+.tnp-video-container object,
+.tnp-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Colors Palette */
+
+.bg-white {
+    background-color: #FFF;
+}
+
+.orange {
+    background-color: #F39C12; /*Orange #F39C12 */
+}
+
+.blue {
+    background-color: #2980B9; /* Blue #2980B9 */
+}
+
+.purple {
+    background-color: #8E44AD; /* Purple #8E44AD */
+}
+
+.tnp-chart {
+    border: 1px solid #eee;
+    width: 100%;
+}
+
+/* Suggerimenti Oggetto + Inserimento Emoticons */
+
+.tnp-suggest-button {
+    margin-left: 8px;
+    border-radius: 3px;
+    background-color: #2980B9;
+    padding: 10px 15px 8px;
+    font-size: 14px;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.tnp-suggest-button:hover {
+    background-color: #3f8dbf;
+}
+
+.tnp-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 10000;
+}
+
+.tnp-popup {
+    width: 40vw;
+    height: 66vh;
+    overflow: auto;
+    margin: 100px auto 0 auto;
+    background-color: #181818;
+    padding: 20px;
+    position: relative;
+}
+.tnp-popup-close {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #181818;
+    color: #fff;
+    font-size: 40px;
+    padding: 10px;
+    text-align: right;
+    cursor: pointer;
+}
+
+.tnp-subjects-header {
+    font-size: 16px;
+    color: #fff;
+    padding: 0px 70px 20px 20px;
+    border-bottom: 1px solid #282828;
+}
+
+#tnp-edit-subjects-list {
+    padding: 0px 70px 20px 20px;
+}
+
+#tnp-edit-subjects-list a {
+    padding: 5px;
+}
+
+#tnp-edit-subjects-list svg {
+    margin: 0px 10px 0px 0px;
+    vertical-align: middle;
+}
+
+.tnp-subject-category {
+    color: #565656;
+    margin: 25px 0px 10px 0px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+/* Stile selettore liste - Schermata di invio newsletter */
+
+.tnp-list-conditions p {
+    margin: 0px 10px;
+}
+
+/* Lists panel */
+.tnp-lists .tnp-notes {
+    margin: 0;
+    font-size: .9em;
+}
+
+/* Codemirror editor with preview */
+iframe.tnp-editor-preview-mobile {
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    box-shadow: 1px 1px 10px #777;
+    border-radius: 10px;
+    padding: 5px;
+    width: 320px;
+    height: 500px;
+    float: left;
+}
+
+iframe.tnp-editor-preview-desktop {
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #777;
+    padding: 15px;
+    width: 650px;
+    margin-right: 20px;
+    height: 500px;
+    float: left;
+}
+
+
+/* Form inserimento licenza in Addons Manager */
+
+#tnp-license-control  {
+    border-left: 5px solid #27ae60;
+    display: inline-block;
+    padding: 15px 20px;
+    margin-left: -10px;
+    margin-top: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+#tnp-license-control form {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#tnp-license-control form input {
+    padding-left: 10px;
+}
+
+#tnp-license-control a {
+    border-bottom: none;
+    color: #27AE60;
+}
+
+
+/* Grid Helpers */
+
+.tnp-one-third {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tnp-two-thirds {
+    width: 59%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Progress bar */
+.tnp-progress {
+    display: flex;
+    height: 1.5rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #c9cccf;
+    border-radius: .25rem;
+    margin: 0px 0px 0px;
+    min-width: 100px;
+}
+
+.tnp-progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease;
+}
+
+.tnp-progress--sent .tnp-progress-bar {
+    background-color: green;
+}
+
+.tnp-progress--error .tnp-progress-bar {
+    background-color: #E74C3C;
+}
+
+.tnp-progress-numbers {
+    text-align: center;
+    color: #666;
+    white-space: nowrap;
+    line-height: normal;
+}
+
+.tnp-progress-date {
+    color: #666;
+    font-style: italic;
+}
+
+/* Schedule buttons styles */
+
+#tnp-schedule-button {
+    background-color: #E67E22 !important;
+}
+
+#tnp-schedule-button:hover {
+    background-color: #ec913f !important;
+}
+
+.tnp-button-cancel {
+    background-color: #E74C3C !important;
+}
+
+/* Newsletter preview on targeting panel */
+.tnpc-preview {
+    margin-top: 10px;
+}
+
+.tnpc-preview .fake-browser-ui iframe {
+    width: 700px;
+}
+
+.tnpc-preview .fake-mobile-browser-ui iframe {
+    width: 320px;
+}
+
+.fake-browser-ui {
+    padding: 30px 0 0;
+    border-radius: 3px;
+    border-bottom: 10px solid #ccc;
+    background: #ddd;
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.fake-mobile-browser-ui {
+    padding: 30px 10px 37px;
+    border-radius: 10px;
+    border-bottom: 10px solid #ccc;
+    background: #ddd;
+    display: inline-block;
+    position: relative;
+    line-height: 0;
+    margin-left: 30px;
+}
+
+.fake-browser-ui .frame {
+    display: block;
+    height: 25px;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.fake-mobile-browser-ui .frame {
+    display: block;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.fake-browser-ui span {
+    height: 12px;
+    width: 12px;
+    border-radius: 8px;
+    background-color: #eee;
+    border: 1px solid #dadada;
+    float: left;
+    margin: 0 0 0 4px;
+}
+
+.fake-mobile-browser-ui span {
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    display: block;
+    margin: auto;
+}
+
+.fake-browser-ui .bt-1 {
+    background-color: #ED594A;
+}
+
+.fake-browser-ui .bt-2 {
+    background-color: #FDD800;
+}
+
+.fake-browser-ui .bt-3 {
+    background-color: #5AC05A;
+}
+
+
+#tnp-body td a.tnp-table-link,
+#tnp-body td a.tnp-table-link:visited {
+    color: #444;
+}
+
+#tnp-body td a.tnp-table-link:hover {
+    color: #3498DB;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.tab-min-height {
+    min-height: 500px;
+}
+
+.tnp-control-all-languages-notice {
+    padding: 15px;
+    border: 1px dashed #999;
+}
+
+/* Spectru, color picker */
+
+/* Down arrow */
+.sp-dd {
+    display: none;
+}
+
+.sp-replacer {
+    width:  30px!important;
+    height: 30px!important;
+}
+
+
+/* Generic status badge for lists */
+
+span.tnp-status {
+    font-weight: bold;
+    line-height: normal;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: .75rem;
+    border: 0;
+    white-space: nowrap;
+}
+
+
+/* Newsletter status */
+
+span.tnp-email-status {
+}
+
+span.tnp-email-status.tnp-email-status--new {
+    background-color: var(--tnp-status-purple-bg);
+    color: var(--tnp-status-purple);
+}
+
+span.tnp-email-status.tnp-email-status--paused {
+    background-color: var(--tnp-status-gray-bg);
+    color: var(--tnp-status-gray);
+}
+
+span.tnp-email-status.tnp-email-status--sending {
+    background-color: var(--tnp-status-orange-bg);
+    color: var(--tnp-status-orange);
+}
+
+span.tnp-email-status.tnp-email-status--scheduled {
+    background-color: var(--tnp-status-blue-bg);
+    color: var(--tnp-status-blue);
+}
+
+span.tnp-email-status.tnp-email-status--sent {
+    background-color: var(--tnp-status-green-bg);
+    color: var(--tnp-status-green);
+}
+
+span.tnp-email-status.tnp-email-status--error {
+    background-color: var(--tnp-status-red-bg);
+    color: var(--tnp-status-red);
+}
+
+
+/* Subscriber status */
+
+span.tnp-user-status {
+}
+
+.tnp-user-status--unsubscribed {
+    background-color: var(--tnp-status-gray-bg);
+    color: var(--tnp-status-gray);
+}
+
+.tnp-user-status--confirmed {
+    background-color: var(--tnp-status-green-bg);
+    color: var(--tnp-status-green);
+}
+
+.tnp-user-status--not-confirmed {
+    background-color: var(--tnp-status-purple-bg);
+    color: var(--tnp-status-purple);
+}
+
+.tnp-user-status--complained {
+    background-color: var(--tnp-status-red-bg);
+    color: var(--tnp-status-red);
+}
+
+.tnp-user-status--bounced {
+    background-color: var(--tnp-status-orange-bg);
+    color: var(--tnp-status-orange);
+}
+
+.tnp-user-status--unknown {
+    background-color: #000;
+    color: #fff;
+}
+
+.tnp-led-green {
+    color: var(--tnp-led-green);
+}
+
+.tnp-led-gray {
+    color: var(--tnp-led-gray);
+}

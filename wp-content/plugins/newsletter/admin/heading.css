@@ -1,0 +1,86 @@
+/* 
+    The head section of each administration page with title and introduction
+*/
+#tnp-heading {
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+/* Title */
+#tnp-heading h2 {
+    color: var(--tnp-title);
+    font-size: 1.5rem;
+    line-height: normal;
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 0;
+    margin: 0px;
+    margin-bottom: 1rem;
+}
+
+#tnp-heading .tnp-title-help {
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    font-size: .8rem;
+    background-color: var(--tnp-blue-lighter);
+    border-radius: 3px;
+    padding: 5px 5px;
+    text-align: center;
+    line-height: normal;
+    color: var(--tnp-blue);
+    border: 1px solid var(--tnp-blue-light);
+    /*text-transform: uppercase;*/
+}
+
+/* Super title (used by some addons) */
+#tnp-heading h3 {
+    color: #666;
+    letter-spacing: 0.1rem;
+    font-size: .8rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-weight: 700;
+    padding: 0;
+    margin: 0px;
+}
+
+/* Introduction (not always present) */
+#tnp-heading p {
+    font-size: .9rem;
+    margin: 0 0 .7rem 0;
+    line-height: 1.3rem;
+}
+
+#tnp-heading a {
+    color: var(--tnp-blue-dark);
+    font-weight: bold;
+    /*border-bottom: 1px solid #fff;*/
+    text-decoration: none;
+}
+
+#tnp-heading p a:hover {
+    color: var(--tnp-blue);
+    /*border-bottom: 1px solid #27AE60;*/
+    text-decoration: underline;
+}
+
+#tnp-heading ul {
+    margin: 1em 0 1em 1em;
+    font-size: .9rem;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+#tnp-heading ul li {
+    line-height: normal;
+    margin: 0;
+}
+
+/* Style for WP global notices */
+#tnp-heading .notice p {
+    margin: 0.5em 0;
+    padding: 2px;
+}
+

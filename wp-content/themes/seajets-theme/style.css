@@ -1,0 +1,30 @@
+/*
+	Theme Name: Seajets Theme
+	Author: Wild Wild Web
+	Author URI: -
+	Description:
+	Version: 1
+	Text Domain: seajets_theme
+*/
+
+.post_content .wp-block-quote {
+	background-size: auto 50%;
+	padding: 20px;
+	position: relative;
+}
+
+.post_content .wp-block-quote::before {
+	content: url('https://projects.wildwildweb.gr/seajets/wp-content/themes/seajets-theme/assets/images/left.png');
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	z-index: 999;
+}
+
+.post_content .wp-block-quote::after {
+	content: url('https://projects.wildwildweb.gr/seajets/wp-content/themes/seajets-theme/assets/images/right.png');
+	position: absolute;
+	bottom: 20px;
+	right: 25px;
+	z-index: 999;
+}

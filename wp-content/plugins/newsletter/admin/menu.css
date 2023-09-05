@@ -1,0 +1,185 @@
+/* Container of the top menu */
+
+#tnp-menu {
+    --tnp-menu-bg: #fff;
+    text-align: left;
+    min-width: 1200px;
+    padding-left: 0;
+    margin-top: 0px;
+    padding-top: 10px;
+    background-color: var(--tnp-menu-bg);
+    padding-left: 20px;
+    margin-right: -20px;
+    margin-left: -20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+#tnp-menu a {
+    text-decoration: none;
+}
+
+#tnp-menu .tnp-header-logo {
+    height: 20px;
+}
+
+/* The menu */
+
+/* The logo */
+#tnp-menu > ul > li:first-child,
+#tnp-menu > ul > li:first-child a
+{
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Level 1 entry */
+#tnp-menu a {
+    text-decoration: none;
+    color: var(--tnp-text);
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: normal;
+}
+
+#tnp-menu ul {
+    padding: 0 20px 0 0;
+    margin: 0; 
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    border: 0;
+}
+
+#tnp-menu ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#tnp-menu ul li {
+    float: left;
+    margin: 0 10px;
+    padding: 0; 
+    border: 0;
+}
+
+#tnp-menu ul li a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#tnp-menu ul li a i {
+    margin-right: 5px;
+}
+
+
+/* Second level */
+
+#tnp-menu ul ul {
+    display: none;
+    z-index: 10000;
+    padding: 0;
+    margin: 0;
+    background: var(--tnp-menu-bg);
+    border-radius: 0px;
+    position: absolute;  
+    padding-top: 20px;
+    padding-bottom: 15px;
+    box-shadow: 0 0px 5px #ccc;
+}
+
+#tnp-menu ul li:hover > ul {
+    display: block;
+}
+
+#tnp-menu ul ul li {
+    float: none; 
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    border: none;
+    text-transform: none;
+    line-height: 1.5em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#tnp-menu ul ul li:hover {
+    background: var(--tnp-text);
+    color: #fff;
+}
+
+#tnp-menu ul ul li a small {
+    display: block;
+    color: #666;
+    float: none !important;
+}
+
+#tnp-menu ul ul li a {
+    font-size: .9rem;
+    outline: 0;
+    box-shadow: 0;
+}	
+
+#tnp-menu ul ul li:hover a {
+    color: #fff;
+}
+
+#tnp-menu ul ul li a:focus,
+#tnp-menu ul ul li a:active
+{
+    outline: 0;
+    box-shadow: none;
+}
+
+#tnp-menu ul ul li a:hover small {
+    color: #ddd;
+}
+
+#tnp-menu ul ul li a i {
+    display: none;
+}
+
+/* License button */
+
+#tnp-menu .tnp-licence-button {
+    border-left: 3px solid var(--tnp-green);
+    background-color: var(--tnp-green);
+    border: none;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    border-radius: 3px;
+}
+
+#tnp-menu .tnp-licence-button a {
+    color: #fff;
+}
+
+#tnp-menu .tnp-licence-button:hover {
+    background-color: var(--tnp-green-dark) !important;
+    border: none;
+}
+
+#tnp-menu .tnp-licence-button-red {
+    background-color: var(--tnp-red);
+    border: none;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    border-radius: 3px;
+}
+
+#tnp-menu .tnp-licence-button-red a {
+    color: #fff;
+}
+
+#tnp-menu .tnp-licence-button-red:hover {
+    background-color: var(--tnp-red-dark) !important;
+    border: none;
+}

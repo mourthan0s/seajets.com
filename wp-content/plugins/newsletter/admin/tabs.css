@@ -1,0 +1,80 @@
+/* Since #tabs has a white background, all elements should be made dark */
+
+#tnp-body .ui-tabs {
+    background-color: transparent;
+    border: 0!important;
+    padding: 0;
+    margin: 0;
+    min-width: 1024px;
+    max-width: 100%;
+}
+
+#tnp-body li.ui-tabs-tab {
+    margin-top: 0;
+}
+
+
+/* Navigation */
+
+#tnp-body .ui-tabs .ui-tabs-nav {
+    padding: 0;
+    margin: 0;
+    background-color: var(--tnp-blue-light);
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#tnp-body .ui-tabs .ui-tabs-nav .ui-tabs-tab {
+    border: none;
+    background: transparent;
+}
+
+/* Tab labels */
+#tnp-body .ui-tabs a.ui-tabs-anchor,
+#tnp-body .ui-tabs a.ui-tabs-anchor:visited {
+    color: #fff;
+    font-size: .9rem;
+    box-shadow: none;
+    font-weight: bold;
+    outline: 0;
+}
+
+/* Active tab label */
+#tnp-body .ui-tabs .ui-state-active a.ui-tabs-anchor,
+#tnp-body .ui-tabs .ui-state-active a.ui-tabs-anchor:visited {
+    color: #555;
+    background-color: #fff;
+}
+
+
+
+/* Tab panels */
+
+#tnp-body .ui-tabs .ui-tabs-panel {
+    padding: 15px!important;
+    background-color: #fff;
+}
+
+#tnp-body .ui-tabs .ui-tabs-panel h3,
+#tnp-body .ui-tabs .ui-tabs-panel h4,
+#tnp-body .ui-tabs .ui-tabs-panel p,
+#tnp-body .ui-tabs .ui-tabs-panel li,
+#tnp-body .ui-tabs .ui-tabs-panel input,
+#tnp-body .ui-tabs .ui-tabs-panel select,
+#tnp-body .ui-tabs .ui-tabs-panel textarea
+{
+    color: var(--tnp-text);
+    font-size: .9rem;
+}
+
+#tnp-body .ui-tabs .ui-tabs-panel h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: normal;
+}
+
+
+
+
+
